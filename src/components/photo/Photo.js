@@ -1,17 +1,17 @@
-export const Photo = (props) => {
+// export const Photo = (props) => {
 
 
-    const {title, thumbnailUrl} = props.album;
-        return(
-            <>
-                <div>
+//     const {title, thumbnailUrl} = props.album;
+//         return(
+//             <>
+//                 <div>
                     
-                    <img src={thumbnailUrl} />
+//                     <img src={thumbnailUrl} />
                     
-                     </div>
+//                      </div>
           
-            </>
-        )
+//             </>
+//         )
 
     
-}
+// }

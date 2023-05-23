@@ -16,7 +16,7 @@ export const Login = () => {
 
     const username = formData.get("username");
     const password = formData.get("password");
-    const repass = formData.get("repass");
+    // const repass = formData.get("repass");
 
     if (username.length < 5) {
       return setUserNameError("User name must be at least 5 charachters long");
@@ -29,31 +29,50 @@ export const Login = () => {
       setPasswordError("");
     }
     setHasUser(true);
+    navigate("/");
     e.target.reset();
-    
   };
 
   return (
     <>
-    
       <h1 className={styles.myHeading}> Login here :</h1>
       <div className={styles.formContainer}>
-        <form onSubmit={onLogin} >
+        <form onSubmit={onLogin}>
           <div>
             <label htmlFor="username">User name: </label>
-            <input input className={styles.formInput} type="text" id="username" name="username"></input>
+            <input
+              input
+              className={styles.formInput}
+              type="text"
+              id="username"
+              name="username"
+            ></input>
           </div>
           <div>{userNameError.length > 0 && <p>{userNameError}</p>}</div>
           <div>
             <label htmlFor="password">Password: </label>
-            <input className={styles.formInput} type="password" id="password" name="password"></input>
+            <input
+              className={styles.formInput}
+              type="password"
+              id="password"
+              name="password"
+            ></input>
           </div>
           <div>{passwordError.length > 0 && <p>{passwordError}</p>}</div>
           <div>
             <label htmlFor="repass">Repeat password: </label>
-            <input className={styles.formInput} type="password" id="repass" name="repass"></input>
+            <input
+              className={styles.formInput}
+              type="password"
+              id="repass"
+              name="repass"
+            ></input>
           </div>
-          <input className={styles.formButton} type="submit" value="Login"></input>
+          <input
+            className={styles.formButton}
+            type="submit"
+            value="Login"
+          ></input>
         </form>
       </div>
     </>
