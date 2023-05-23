@@ -35,25 +35,27 @@ export const Login = () => {
 
   return (
     <>
-      <h1> Login here :</h1>
-
-      <form onSubmit={onLogin} className={styles.loginForm}>
-        <div>
-          <label htmlFor="username">User name: </label>
-          <input type="text" id="username" name="username"></input>
-        </div>
-        <div>{userNameError.length > 0 && <p>{userNameError}</p>}</div>
-        <div>
-          <label htmlFor="password">Password: </label>
-          <input type="password" id="password" name="password"></input>
-        </div>
-        <div>{passwordError.length > 0 && <p>{passwordError}</p>}</div>
-        <div>
-          <label htmlFor="repass">Repeat password: </label>
-          <input type="password" id="repass" name="repass"></input>
-        </div>
-        <input type="submit" value="Login"></input>
-      </form>
+    
+      <h1 className={styles.myHeading}> Login here :</h1>
+      <div className={styles.formContainer}>
+        <form onSubmit={onLogin} >
+          <div>
+            <label htmlFor="username">User name: </label>
+            <input input className={styles.formInput} type="text" id="username" name="username"></input>
+          </div>
+          <div>{userNameError.length > 0 && <p>{userNameError}</p>}</div>
+          <div>
+            <label htmlFor="password">Password: </label>
+            <input className={styles.formInput} type="password" id="password" name="password"></input>
+          </div>
+          <div>{passwordError.length > 0 && <p>{passwordError}</p>}</div>
+          <div>
+            <label htmlFor="repass">Repeat password: </label>
+            <input className={styles.formInput} type="password" id="repass" name="repass"></input>
+          </div>
+          <input className={styles.formButton} type="submit" value="Login"></input>
+        </form>
+      </div>
     </>
   );
 };

@@ -78,6 +78,7 @@ export const Register = () => {
 
                     <label htmlFor="con-pass">Confirm Password:</label>
                     <input type="password" name="confirm-password" id="confirm-password" />
+                    
 
                     <input className="btn submit" type="submit" value="Register" />
 
