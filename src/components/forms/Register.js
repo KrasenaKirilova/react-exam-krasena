@@ -30,7 +30,7 @@ export const Register = () => {
             type="email"
             id="email"
             name="email"
-            placeholder="maria@email.com"
+            placeholder="yourEmail@email.com"
           />
 
           <label htmlFor="pass">Password:</label>

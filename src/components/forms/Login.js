@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useLocation, link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthContext";
 import styles from "./Login.module.css";
 
 export const Login = () => {
@@ -8,7 +9,8 @@ export const Login = () => {
 
   const [userNameError, setUserNameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const [hasUser, setHasUser] = useState(false);
+
+  const { hasUser, setHasUser } = useContext(AuthContext);
 
   const onLogin = (e) => {
     e.preventDefault();
@@ -28,7 +30,9 @@ export const Login = () => {
     } else {
       setPasswordError("");
     }
+
     setHasUser(true);
+
     navigate("/");
     e.target.reset();
   };
