@@ -12,9 +12,10 @@ import { Register } from "./components/forms/Register";
 import { About } from "./components/about/About";
 import { Contacts } from "./components/contacts/Contacts";
 import { DetailsPage } from "./components/detailsPage/DetailsPage";
-import Comments from "./components/comments/Comments";
+// import { Comments } from "./components/comments/Comments";
 import { useState } from "react";
 import { AuthContext } from "./context/AuthContext";
+
 
 function App() {
   const [hasUser, setHasUser] = useState(false);
@@ -27,11 +28,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="*" element={<NotFound />} />
-            <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
             <Route path="/albums" element={<Albums />} />
             <Route path="/albums/:id" element={<DetailsPage />} />
-            <Route path="/comments" element={<Comments />} />
+            {/* <Route path="/comments" element={<Comments />} /> */}
+            <Route path="/about" element={<About />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/topbar" element={<TopBar />} />

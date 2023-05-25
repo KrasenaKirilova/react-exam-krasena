@@ -31,3 +31,8 @@
     margin: 10px 40px 10px 60px;
     color: rgb(239, 107, 45);
   }
+
+  .error {
+    color: red;
+    font-size: large;
+  }

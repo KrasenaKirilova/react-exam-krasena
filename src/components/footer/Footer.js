@@ -11,7 +11,7 @@ export const Footer = () => {
                 <Link to="/" className="navbar-brand">
                   <h1 className="m-0 text-uppercase text-white">
                     <i className="fa fa-birthday-cake fs-1 text-dark me-3"></i>
-                    CakeZone
+                    Krasena's Bakery
                   </h1>
                 </Link>
                 <p className="mt-3">
@@ -84,10 +84,6 @@ export const Footer = () => {
                       <i className="bi bi-arrow-right text-primary me-2"></i>
                       Cake Colors
                     </Link>
-                    {/* <Link to="/contacts" className="text-secondary">
-                      <i className="bi bi-arrow-right text-primary me-2"></i>
-                      Contact Us
-                    </Link> */}
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
@@ -121,12 +117,6 @@ export const Footer = () => {
               Your Site Name
             </a>
             . All Rights Reserved. Designed by{" "}
-            {/* <a
-              className="text-white border-bottom"
-              href="https://htmlcodex.com"
-            >
-              HTML Codex
-            </a> */}
           </p>
         </div>
       </div>

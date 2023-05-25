@@ -9,6 +9,7 @@ export const Login = () => {
 
   const [userNameError, setUserNameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const [repassError, setRepassError] = useState("");
 
   const { hasUser, setHasUser } = useContext(AuthContext);
 
@@ -18,7 +19,7 @@ export const Login = () => {
 
     const username = formData.get("username");
     const password = formData.get("password");
-    // const repass = formData.get("repass");
+    const repass = formData.get("repass");
 
     if (username.length < 5) {
       return setUserNameError("User name must be at least 5 charachters long");
@@ -30,7 +31,11 @@ export const Login = () => {
     } else {
       setPasswordError("");
     }
-
+    if (repass !== password) {
+      return setRepassError("Re-pass don't match!");
+    } else {
+      setRepassError("");
+    }
     setHasUser(true);
 
     navigate("/");
@@ -52,7 +57,9 @@ export const Login = () => {
               name="username"
             ></input>
           </div>
-          <div>{userNameError.length > 0 && <p>{userNameError}</p>}</div>
+          <div className={styles.error}>
+            {userNameError.length > 0 && <p>{userNameError}</p>}
+          </div>
           <div>
             <label htmlFor="password">Password: </label>
             <input
@@ -62,7 +69,9 @@ export const Login = () => {
               name="password"
             ></input>
           </div>
-          <div>{passwordError.length > 0 && <p>{passwordError}</p>}</div>
+          <div className={styles.error}>
+            {passwordError.length > 0 && <p>{passwordError}</p>}
+          </div>
           <div>
             <label htmlFor="repass">Repeat password: </label>
             <input
@@ -71,6 +80,9 @@ export const Login = () => {
               id="repass"
               name="repass"
             ></input>
+          </div>
+          <div className={styles.error}>
+            {repassError.length > 0 && <p>{repassError}</p>}
           </div>
           <input
             className={styles.formButton}
