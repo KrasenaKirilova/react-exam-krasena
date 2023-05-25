@@ -22,9 +22,9 @@ export const Comments = () => {
 
   return (
     <div>
-      <h1>Cake details here </h1>
-      <p>Current cake's ID is {item.id}</p>
-      <p>Current text is{item.name} </p>
+      <h1>Comments here </h1>
+      
+      <p>{item.name} </p>
     </div>
   );
 };
