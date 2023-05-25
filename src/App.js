@@ -11,7 +11,8 @@ import { Login } from "./components/forms/Login";
 import { Register } from "./components/forms/Register";
 import { About } from "./components/about/About";
 import { Contacts } from "./components/contacts/Contacts";
-import {AlbumDetails} from ".//components/albumDetails/AlbumDetails"
+import { DetailsPage } from "./components/detailsPage/DetailsPage";
+// import {Comments} from "./components/comments/Comments";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
           <Route path="/albums" element={<Albums />} />
-          <Route path="/albums/:id" element={<AlbumDetails />} />
+          <Route path="/albums/:id" element={<DetailsPage />} />
+          {/* <Route path="/comments" element={<Comments />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/topbar" element={<TopBar />} />
