@@ -1,17 +1,16 @@
 import { useContext, useState } from "react";
-import { useLocation, link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import styles from "./Login.module.css";
 
 export const Login = () => {
-  const Location = useLocation();
   const navigate = useNavigate();
 
   const [userNameError, setUserNameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [repassError, setRepassError] = useState("");
 
-  const { hasUser, setHasUser } = useContext(AuthContext);
+  const { setHasUser } = useContext(AuthContext);
 
   const onLogin = (e) => {
     e.preventDefault();

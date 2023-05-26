@@ -5,14 +5,13 @@ import styles from "./Login.module.css";
 export const Register = () => {
   const navigate = useNavigate();
 
-  
   const [hasUser, setHasUser] = useState(false);
 
   const onRegister = (e) => {
     e.preventDefault();
     
     setHasUser(true);
-    navigate("/");
+    navigate("/products");
     e.target.reset();
     
   };
