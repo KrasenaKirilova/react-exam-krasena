@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import { commentService } from "../../services/PostService";
+import styles from "../comments/Comments.module.css";
 
 export const Comments = () => {
-  // const { id } = useParams();
   const [items, setItems] = useState(null);
   const [isLoadind, setIsloading] = useState(true);
 
@@ -23,16 +22,18 @@ export const Comments = () => {
   }
 
   return (
-    <div>
-      <h1>Comments here </h1>
+    <>
+      <h1>Comments here:</h1>
+
       {!isLoadind &&
         items.length > 0 &&
         items.map((x) => (
-         <p>
-            {x.body} 
-            <p>{x.email}</p>
-          </p>
+          <div className={`${styles.dataView}`}>
+            <p>{x.body}</p>
+
+            <h5>{x.email}</h5>
+          </div>
         ))}
-    </div>
+    </>
   );
 };
